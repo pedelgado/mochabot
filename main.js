@@ -2,7 +2,7 @@ const dotenv = require('dotenv').config();
 const Discord = require('discord.js');
 const fs = require('fs');
 
-const prefix = 't ';
+const prefix = 'tt ';
 
 const client = new Discord.Client();
 
