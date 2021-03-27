@@ -41,6 +41,18 @@ module.exports = {
 
                 default:
             }
+        } else {
+
+            const deny_messages = [
+                '¿Dónde crees que vas?',
+                'Tu no.',
+                'Me temo que no.',
+                '¿Sabes qué son los permisos?',
+            ]
+
+            var reply = deny_messages[Math.floor(Math.random() * deny_messages.length)];
+
+            message.channel.send(reply);
         }
 
     }
