@@ -2,7 +2,7 @@ const { bot_client_key } = require('./config/config');
 const Discord = require('discord.js');
 const fs = require('fs');
 
-const prefix = 'tt ';
+const prefix = 'mb ';
 
 const client = new Discord.Client();
 

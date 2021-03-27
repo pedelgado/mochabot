@@ -15,12 +15,12 @@ module.exports = {
         const allowed = member_roles.some(role => allowed_roles.includes(role.id));
 
         if (allowed) {
-            let member;
+
+            let member = message.mentions.users.first();
 
             switch (action) {
 
-                case 'reclutar':
-                    member = message.mentions.users.first();
+                case '+':
                     if (member) {
                         const memberTarget = message.guild.members.cache.get(member.id);
                         memberTarget.roles.add(roles.rol_ruster1_id).catch(console.error);
@@ -29,8 +29,7 @@ module.exports = {
                         message.channel.send('¿A quién quieres reclutar para Rusters?');
                     break;
 
-                case 'despedir':
-                    member = message.mentions.users.first();
+                case '-':
                     if (member) {
                         const memberTarget = message.guild.members.cache.get(member.id);
                         memberTarget.roles.remove(roles.rol_ruster1_id).catch('No existe este rol.');
