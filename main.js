@@ -1,8 +1,8 @@
-const dotenv = require('dotenv').config();
+const { bot_client_key } = require('./config/config');
 const Discord = require('discord.js');
 const fs = require('fs');
 
-const prefix = 't ';
+const prefix = 'mb ';
 
 const client = new Discord.Client();
 
@@ -32,4 +32,4 @@ client.on('message', message => {
     }
 })
 
-client.login(process.env.BOT_CLIENT_KEY);
+client.login(bot_client_key);
